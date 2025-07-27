@@ -1,0 +1,38 @@
+{
+  "name": "dummy-image-generator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Generate images with EXIF/GPS metadata for testing purposes",
+  "main": "dist/index.js",
+  "author": "yoshinorin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoshinorin/dummy-image-generator"
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "generate": "node dist/index.js",
+    "fmt": "biome format --write",
+    "dev": "npm run build && npm run generate"
+  },
+  "keywords": [
+    "exif",
+    "gps",
+    "image"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "exiftool-vendored": "30.3.0",
+    "sharp": "0.34.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.2",
+    "@types/node": "24.1.0",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "npm": ">=10",
+    "node": ">=24"
+  }
+}
